@@ -74,7 +74,7 @@ pipeline{
         {
             steps{
                 sh "wget --user=admin --password=admin http://localhost:8282/repository/capstone-artifacts/capstone/Rail1/1.0.0/Rail1-1.0.0.war"
-                sh "mv Rail1-6.0.0.war Rail-tickets.war"
+                sh "mv Rail1-1.0.0.war Rail-tickets.war"
                 sh "cp Rail-tickets.war  /users/pratikkumar/desktop/ansible"
             }
         }
