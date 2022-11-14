@@ -78,13 +78,13 @@ pipeline{
                 sh "cp Rail-tickets.war  /users/pratikkumar/desktop/ansible"
             }
         }
-        stage("building a docker image with the war file")
+        /*stage("building a docker image with the war file")
         { 
             steps{
                 git 'file:///Users/pratikkumar/desktop/ansible'
                 sh "docker build -t simple-devloper ."
             }
-        }
+        }*/
         stage("Playbook to build image & start a contaier"){
             steps{
                 sh "sudo chmod 744 /Users/pratikkumar/desktop/ansible/invent"
