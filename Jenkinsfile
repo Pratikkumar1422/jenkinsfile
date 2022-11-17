@@ -110,7 +110,7 @@ pipeline{
         stage("Deploy container to K8s cluster")
         {
             steps{
-                sh "docker stop nexus2"
+                sh "docker stop nexus"
                 sh "minikube start"
                 sleep 10 //seconds
                 sh "minikube image load webapp-capstone"
