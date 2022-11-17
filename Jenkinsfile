@@ -4,11 +4,11 @@ pipeline{
         PATH = "/Users/pratikkumar/downloads/apache-maven-3.8.1/bin:$PATH"
     }
     stages{
-       /* stage("Pre-steps"){
+        stage("Pre-steps"){
             steps{
                 build "Pre-Steps"
             }
-        }*/
+        }
         stage("SCM Checkout"){
             steps{
                 git 'http://localhost:3000/pratik/Train-ticket.git'
