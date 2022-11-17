@@ -87,7 +87,7 @@ pipeline{
         }*/
         stage("Playbook to build image & start a contaier"){
             steps{
-               // sh "sudo chmod 744 /Users/pratikkumar/desktop/ansible/invent"
+                sh "sudo chmod 744 /Users/pratikkumar/desktop/ansible/invent"
                 ansiblePlaybook installation: 'ansible', inventory: 'invent', playbook: '/Users/pratikkumar/desktop/ansible/ansi.yaml'
             }
         }
