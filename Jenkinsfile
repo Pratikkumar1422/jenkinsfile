@@ -114,7 +114,7 @@ pipeline{
                 sh "minikube start"
                 sleep 10 //seconds
                 sh "minikube image load webapp-capstone"
-                git 'file:///Users/pratikkumar/desktop/ansible'
+                git 'file:///Users/pratikkumar/Desktop/ansible'
                 sh "kubectl create -f deployment.yaml"
             }
         }
