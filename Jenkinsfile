@@ -101,7 +101,7 @@ pipeline{
                 build "Capstone-db-create"
             }
         }
-        stage('Ready to Deploy to k8s cluster') {
+        /*stage('Ready to Deploy to k8s cluster') {
             options {
                 timeout(time: 5, unit: 'MINUTES') 
             }
@@ -119,7 +119,7 @@ pipeline{
                 //git 'file:///Users/pratikkumar/Desktop/ansible'
                 sh "kubectl create -f /Users/pratikkumar/Desktop/ansible/deployment.yaml"
             }
-        }
+        }*/
         
 }
 }
