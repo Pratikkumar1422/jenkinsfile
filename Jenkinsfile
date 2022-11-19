@@ -63,7 +63,7 @@ pipeline{
                 sh "docker stop sonarqube"
                 //sh "docker restart nexus"
                 sh "docker restart nexus"
-                sleep 40 //seconds
+                sleep 50 //seconds
                // nexusArtifactUploader artifacts: [[artifactId: 'Rail1', classifier: '', file: '/Users/pratikkumar/.jenkins/workspace/Train-ticket/target/Rail-tickets.war', type: 'war']], credentialsId: '39f0c31f-63d7-49c1-97ec-4f76d410a351', groupId: 'capstone', nexusUrl: 'localhost:8087', nexusVersion: 'nexus3', protocol: 'http', repository: 'capstone-artifacts', version: '6.0.0'
                 //nexusArtifactUploader artifacts: [[artifactId: 'Rail1', classifier: '', file: '/Users/pratikkumar/.jenkins/workspace/M.Tech_online_Ticket_Booking_Application/target/Rail-tickets.war', type: 'war']], credentialsId: 'nexu', groupId: 'capstone', nexusUrl: 'localhost:8282', nexusVersion: 'nexus3', protocol: 'http', repository: 'capstone-artifacts', version: '1.0.0'
                nexusArtifactUploader artifacts: [[artifactId: 'Rail1', classifier: '', file: '/Users/pratikkumar/.jenkins/workspace/M.Tech_online_Ticket_Booking_Application/target/Rail-tickets.war', type: 'war']], credentialsId: 'nexu', groupId: 'capstone', nexusUrl: 'localhost:8282', nexusVersion: 'nexus3', protocol: 'http', repository: 'capstone-artifacts', version: '1.0.0'
