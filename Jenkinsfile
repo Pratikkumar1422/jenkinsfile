@@ -65,7 +65,8 @@ pipeline{
                 sh "docker restart nexus"
                 sleep 40 //seconds
                // nexusArtifactUploader artifacts: [[artifactId: 'Rail1', classifier: '', file: '/Users/pratikkumar/.jenkins/workspace/Train-ticket/target/Rail-tickets.war', type: 'war']], credentialsId: '39f0c31f-63d7-49c1-97ec-4f76d410a351', groupId: 'capstone', nexusUrl: 'localhost:8087', nexusVersion: 'nexus3', protocol: 'http', repository: 'capstone-artifacts', version: '6.0.0'
-                nexusArtifactUploader artifacts: [[artifactId: 'Rail1', classifier: '', file: '/Users/pratikkumar/.jenkins/workspace/M.Tech_online_Ticket_Booking_Application/target/Rail-tickets.war', type: 'war']], credentialsId: 'nexu', groupId: 'capstone', nexusUrl: 'localhost:8282', nexusVersion: 'nexus3', protocol: 'http', repository: 'capstone-artifacts', version: '1.0.0'
+                //nexusArtifactUploader artifacts: [[artifactId: 'Rail1', classifier: '', file: '/Users/pratikkumar/.jenkins/workspace/M.Tech_online_Ticket_Booking_Application/target/Rail-tickets.war', type: 'war']], credentialsId: 'nexu', groupId: 'capstone', nexusUrl: 'localhost:8282', nexusVersion: 'nexus3', protocol: 'http', repository: 'capstone-artifacts', version: '1.0.0'
+               nexusArtifactUploader artifacts: [[artifactId: 'Rail1', classifier: '', file: '/Users/pratikkumar/.jenkins/workspace/M.Tech_online_Ticket_Booking_Application/target/Rail-tickets.war', type: 'war']], credentialsId: 'nexu', groupId: 'capstone', nexusUrl: 'localhost:8282', nexusVersion: 'nexus3', protocol: 'http', repository: 'capstone-artifacts', version: '1.0.0'
             }
             
         }       
@@ -73,7 +74,8 @@ pipeline{
         stage("Pulling artifacts from nexus")
         {
             steps{
-                sh "wget --user=admin --password=admin http://localhost:8282/repository/capstone-artifacts/capstone/Rail1/1.0.0/Rail-1.0.0.war"
+                //sh "wget --user=admin --password=admin http://localhost:8282/repository/capstone-artifacts/capstone/Rail1/1.0.0/Rail-1.0.0.war"
+                sh "wget --user=admin --password=admin http://localhost:8282/repository/capstone-artifacts/capstone/Rail1/1.0.0/Rail1-1.0.0.war"
                 sh "mv Rail1-1.0.0.war Rail-tickets.war"
                 sh "cp Rail-tickets.war  /users/pratikkumar/desktop/ansible"
             }
